@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import {AppFullScreenLoader, AppImage, AppText} from '@app/components';
 import {styles} from './style';
-import {Theme, scaledSize} from '@app/utils';
+import {Theme} from '@app/utils';
 import {Images, SearchIcon} from '@app/assets';
 
 export const StoreListScreen: React.FC = React.memo(() => {
@@ -21,20 +21,8 @@ export const StoreListScreen: React.FC = React.memo(() => {
         <AppFullScreenLoader />
       ) : (
         <>
-          <View
-            style={{
-              padding: scaledSize(16),
-              backgroundColor: Theme.common.cardBackgroundColor,
-              elevation: 8,
-              flexDirection: 'row',
-              alignItems: 'center',
-            }}>
-            <AppText
-              fontWeight="bold"
-              style={{
-                fontSize: scaledSize(24),
-                flex: 1,
-              }}>
+          <View style={styles.headerContainer}>
+            <AppText fontWeight="bold" style={styles.screenTitleText}>
               Retail Pulse
             </AppText>
             <TouchableNativeFeedback onPress={goToSearchScreen}>

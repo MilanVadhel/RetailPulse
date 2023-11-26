@@ -15,4 +15,15 @@ export const styles = StyleSheet.create({
     borderRadius: scaledSize(8),
   },
   storeContentContainer: {padding: scaledSize(16)},
+  headerContainer: {
+    padding: scaledSize(16),
+    backgroundColor: Theme.common.cardBackgroundColor,
+    elevation: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  screenTitleText: {
+    fontSize: scaledSize(24),
+    flex: 1,
+  },
 });

@@ -9,7 +9,7 @@ import React, {useEffect, useState} from 'react';
 
 import {AppNavigation} from './navigation/AppNavigation';
 import {Toast} from 'react-native-toast-message/lib/src/Toast';
-import {LayoutAnimation, View} from 'react-native';
+import {LayoutAnimation, StyleSheet, View} from 'react-native';
 import {AppText} from './components';
 import NetInfo, {NetInfoState} from '@react-native-community/netinfo';
 import {Theme, scaledSize} from './utils';
@@ -46,27 +46,8 @@ const NoInternetBanner: React.FC = React.memo(() => {
   return (
     <>
       {isOffline ? (
-        <View
-          style={{
-            width: '100%',
-            height: '8%',
-            justifyContent: 'center',
-            elevation: 1,
-            zIndex: 1,
-            paddingTop: '5%',
-            position: 'absolute',
-            backgroundColor: 'red',
-            alignItems: 'center',
-          }}>
-          <AppText
-            fontWeight="bold"
-            style={{
-              flex: 1,
-              fontSize: scaledSize(24),
-              justifyContent: 'center',
-              alignItems: 'center',
-              color: Theme.common.bannerTextColor,
-            }}>
+        <View style={styles.bannerContainer}>
+          <AppText fontWeight="bold" style={styles.noInternetText}>
             No Internet
           </AppText>
         </View>
@@ -75,4 +56,24 @@ const NoInternetBanner: React.FC = React.memo(() => {
   );
 });
 
+const styles = StyleSheet.create({
+  bannerContainer: {
+    width: '100%',
+    height: '8%',
+    justifyContent: 'center',
+    elevation: 1,
+    zIndex: 1,
+    paddingTop: '5%',
+    position: 'absolute',
+    backgroundColor: 'red',
+    alignItems: 'center',
+  },
+  noInternetText: {
+    flex: 1,
+    fontSize: scaledSize(24),
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: Theme.common.bannerTextColor,
+  },
+});
 export default App;

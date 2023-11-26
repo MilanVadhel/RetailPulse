@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "899981601322",
+    "project_id": "retailpulse-f5262",
+    "storage_bucket": "retailpulse-f5262.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:899981601322:android:7d167eb05e1888873ef153",
+        "android_client_info": {
+          "package_name": "com.retailspulse"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsIMFMefXnTavboEYwIODoaVBE_LcnuSg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
